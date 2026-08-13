@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotobox - Einschulung Mats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE5B4 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 30px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .brand-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #d4a017;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 1px;
+        }
+
+        .brand-name span {
+            color: #ff8c00;
+        }
+
+        .claim {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* --- HERO & BILD ANPASSUNG --- */
+        .hero-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0 30px 0;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .banana {
+            width: 100%;
+            max-width: 360px; /* Begrenzt die Bildbreite, damit es nicht übermächtig wird */
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+            transition: transform 0.3s ease;
+        }
+
+        .banana:hover {
+            transform: translateY(-5px);
+        }
+
+        .banana img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        /* ----------------------------- */
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+            border: none;
+            cursor: pointer;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 140, 0, 0.5);
+            background: linear-gradient(135deg, #ffed4e 0%, #ff9500 100%);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(212, 160, 23, 0.2);
+            color: #777;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            animation: fadeIn 1.4s ease-out 1s both;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2rem;
+            }
+
+            .banana {
+                max-width: 280px; /* Auf Smartphones etwas kleiner für optimale Darstellung */
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="brand-name">📸Einschulung <span>Mats</span></h1>
+            <p class="claim">Kirchwald, 11.08.2026.</p>
+        </div>
+
+        <div class="hero-section">
+            <div class="banana">
+                <img src="https://prev2.pictrs.com/8581e6033e0f259493a602e710d2e947/medium_13x7_CW_0949.jpg?v=1786646971" alt="Einschulung Mats">
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="https://www.pictrs.com/christianoblanco/3563267?acc_token=d3fdfe" target="_blank" class="cta-button">💾 Galerie Pictrs.com</a>
+            <br>
+            <a href="https://drive.google.com/drive/folders/1k-dokLsTU6Zov7sk-OKO40tsJrDCVTtc?usp=share_link" target="_blank" class="cta-button">💾 Download Google-Drive</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Christian Weiß<br><br>
+            🏠 Hinter Pöschen 26 - 56729 Kirchwald &nbsp;|&nbsp; 📧 cw1090@googlemail.com &nbsp;|&nbsp; 📱 0162/4239205<br><br>
+            Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
